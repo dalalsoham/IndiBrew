@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ============== Navbar + Hero Background ============== */
+.nav-hero {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(241, 205, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(241, 205, 255, 1) 5%,
+    rgba(251, 240, 238, 1) 25%,
+    rgba(253, 252, 249, 1) 40%
+  );
+}
+
+@media screen and (max-width: 645px) {
+  .nav-hero {
+    width: 100vw;
+    height: 152vh;
+  }
+}
+
+/* ========= Navbar Animation ========= */
+.modal {
+  animation: slideInRight 0.5s forwards ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(25%);
+  }
+}
+
+/* ========= Blur effect on body when navbar is open in mobile ========= */
+.nav-hero.blureffect {
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: blur(5px);
+}
